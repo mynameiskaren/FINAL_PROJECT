@@ -1,0 +1,91 @@
+/*
+Pizza Theme Colors
+   #54643D - Delta (Green)
+   #ECA442 - Gamboge (Yellow)
+   #CA2521 - Tomato (Red)
+   #61120E - Pepperoni (Dark Red)
+*/
+html {
+  position: relative;
+  min-height: 100%;
+}
+body{
+    background: 
+    /* top, transparent red */ 
+    linear-gradient(
+    rgba(228, 180, 85, .5),
+    rgba(228, 180, 85, .5)
+    ),
+    /* bottom, image */
+    url("/images/bg.jpg");
+    background-repeat: repeat;
+    margin-bottom: 85px; /* Margin bottom by footer height */
+}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+    }
+}
+     
+.input-group-text {
+    width: 125px !important;   
+}
+
+.total-text {
+    width:175px !important;
+   
+}
+.total {
+    width: 250px !important;
+}
+
+
+.container {
+  max-width: 960px;
+}
+
+.lh-condensed { line-height: 1.25; }
+
+
+.jumbotron {
+    background: linear-gradient(
+      rgba(255, 255, 255, .78),
+      rgba(255, 255, 255, .7)), 
+      url("../images/pizzaHeader.jpg");
+    background-size: cover;
+    font-weight: bold;
+}
+
+.navbg{
+    background-color: #61120E;
+}
+
+.dRed{
+    color: #61120E;
+}
+
+.yellow{
+    color: #ECA442;
+}
+.grn{
+    color: #11760F;
+}
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 85px; /* Set the fixed height of the footer here */
+    line-height: 20px; /* Vertically center the text there */
+    background-color: #61120E;
+}

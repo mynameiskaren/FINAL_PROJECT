@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Pizza Theme Colors
+   #A5A79A - Delta (Green)
+   #ECA442 - Gamboge (Yellow)
+   #CA2521 - Tomato (Red)
+   #61120E - Pepperoni (Dark Red)
+   -->
+    <meta charset="UTF-8">
+    <title>Pizza Order Form</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbg navbar-expand-lg">
+    <div class="container"><a class="yellow navbar-brand" href="#">
+        <img src="images/pizza.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Pizza Eats
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link yellow" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link yellow" href="#">Menu</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link grn" href="#">Order</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link yellow" href="#">About</a>
+            </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+<!--/Navbar -->
+
+<!-- Container -->
+<div class="container bg-light">
+   <!--Jumbotron/Header-->
+    <div class="jumbotron py-5 text-center">
+        <h2 class="dRed">Time To Eat!</h2>
+        <h4 class="dRed">Please fill out some important infromation below:</h4>
+    </div>
+    <div class="row"> 
+        <!-- Delivery Location -->
+        <div class="col-sm-6">
+            <label for="deliveryLocation"><h2>Delivery Location</h2></label>
+            <form id="deliveryLocation">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="name-addon">Name</span>
+                    </div>
+                    <input type="text" class="form-control" id="name" name="Full Name" placeholder="FirstName LastName">
+                    <div class="">
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="addressType">Address Type</label>
+                  </div>
+                  <select class="custom-select" id="addressType" name="Address Type">
+                    <option value="" selected>Choose...</option>
+                    <option value="house">House</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="business">Business</option>
+                    <option value="campus">Campus</option>
+                    <option value="hotel">Hotel</option>
+                    <option value="dorm">Dorm</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <div class="">
+                  </div>
+                  <input type="text" class="form-control" id="otherAddressType" name="Other Address Type"  placeholder="Address Type ..." >
+                  <div class="">
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="stAddress-addon">Street Address</span>
+                    </div>
+                    <input type="text" class="form-control" id="stAddress" name="Street Address" placeholder="1234 Main St">
+                    <div class="">
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="suiteno-addon">Address 2</span>
+                    </div>
+                    <input type="text" class="form-control" id="suiteno" name="Suite Number" placeholder="Apartment, Room Number, or Suite">
+                    <div class="">
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="city-addon">City</span>
+                    </div>
+                    <input type="text" class="form-control" id="city" name="City" placeholder="City">
+                    <div class="">  <!--validation message block-->
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="state-addon">State</span>
+                    </div>
+                    <input type="text" class="form-control" id="state" name="State" placeholder="State">
+                    <div class="">  <!--validation message block-->
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="zipcode-addon">Zip Code</span>
+                    </div>
+                    <input type="text" class="form-control" id="zipcode" name="Zip Code" placeholder="12345">
+                    <div class="">
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="phoneno-addon">Phone Number</span>
+                    </div>
+                    <input type="tel" class="form-control" id="phoneno" name="Phone Number" placeholder="123-456-7890">
+                    <div class="">  
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="phoneno-addon">Email</span>
+                    </div>               
+                    <input type="email" class="form-control" id="email" name="Email" placeholder="you@example.com">
+                    <div class=""> 
+                    </div>
+                </div>
+            </form> 
+        </div>
+        
+        <!-- Build Your Order -->
+        <div class="col-sm-6">
+          <label for="sizeCost"><h2>Build Your Order</h2>
+
+          </label>
+          <form id="order">
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-4 pt-0"><strong>Dough Options</strong></legend>
+                    <div class="col-sm-8">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="optdough" id="handTossed" value="handTossed">
+                          <label class="form-check-label" for="handTossed">
+                            Hand Tossed
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="optdough" id="thinCrust" value="thinCrust">
+                          <label class="form-check-label" for="thinCrust">
+                            Thin Crust
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="optdough" id="newYorkStyle" value="newYorkStyle">
+                          <label class="form-check-label" for="newYorkStyle">
+                            New York Style
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="optdough" id="glutenFree" value="glutenFree">
+                          <label class="form-check-label" for="glutenFree">
+                            Gluten Free
+                          </label>
+                        </div>
+                    </div> 
+                </div> 
+            </fieldset>
+
+            <div class="form-group">
+                <label for="sizeCost"><strong>Size and Cost</strong></label>
+                <select class="form-control" id="sizeCost">
+                  <option>Chose a dough above to see available size and prize...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="optCheese"><strong>Cheese Options</strong></label>
+                <select class="form-control" id="optCheese">
+                  <option value="0">Light: no charge</option>
+                  <option value="0">Normal (default): no charge</option>
+                  <option value="2.99">Extra: +$2.99</option>
+                  <option value="3.99">Double: +$3.99</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="optSauce"><strong>Sauce Options</strong></label>
+                <select class="form-control" id="optSauce">
+                  <option value="0">Regular Tomato: no charge</option>
+                  <option value="0.99">Hearty Tomato: +$.99</option>
+                  <option value="1.99">BBQ Sauce: +$1.99</option>
+                </select>
+            </div>
+
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-12 pt-0"><strong>Toppings($.99 extra each)</strong></legend>
+                </div>
+                <div class="row" >
+                    <div id="toppings" name="toppings" class="col-sm-3">
+                        <div class="form-check">
+                          <input class="form-check-input toppings" type="checkbox" name="pepperoni" id="pepperoni" value="pepperoni">
+                          <label class="form-check-label" for="pepperoni">
+                            pepperoni
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input toppings" type="checkbox" name="sausage" id="sausage" value="sausage">
+                          <label class="form-check-label" for="sausage">
+                            sausage
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input toppings" type="checkbox" name="ham" id="ham" value="ham">
+                          <label class="form-check-label" for="ham">
+                            ham
+                          </label>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                         <div class="form-check">
+                          <input class="form-check-input toppings" type="checkbox" name="bacon" id="bacon" value="bacon">
+                          <label class="form-check-label" for="bacon">
+                            bacon
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input toppings" type="checkbox" name="salami" id="salami" value="salami">
+                          <label class="form-check-label" for="salami">
+                            salami
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input toppings" type="checkbox" name="peppers" id="peppers" value="peppers">
+                          <label class="form-check-label" for="peppers">
+                            peppers
+                          </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-check">
+                          <input class="form-check-input toppings" type="checkbox" name="olives" id="olives" value="olives">
+                          <label class="form-check-label" for="olives">
+                            olives
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input toppings" type="checkbox" name="jalapenos" id="jalapenos" value="jalapenos">
+                          <label class="form-check-label" for="jalapenos">
+                            jalapenos
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input toppings" type="checkbox" name="mushrooms" id="mushrooms" value="mushrooms">
+                          <label class="form-check-label" for="mushrooms">
+                            mushrooms
+                          </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-check">
+                          <input class="form-check-input toppings" type="checkbox" name="pineapple" id="pineapple" value="pineapple">
+                          <label class="form-check-label" for="pineapple">
+                            pineapple
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input toppings" type="checkbox" name="onion" id="onion" value="onion">
+                          <label class="form-check-label" for="onion">
+                            onion
+                          </label>
+                        </div>
+                    </div>
+                </div> 
+            </fieldset>      
+          </form>
+             <div class="form-group">
+                <div class="input-group mb-6 total">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text total-text">Your Order Total is: $</span>
+                  </div>
+                  <input type="text" class="form-control" id="total" readonly>           
+                </div>
+            </div>	  
+        </div>
+    </div>
+  
+    <!-- Order Total -->
+    <fieldset class="form-group">    
+    <div class="row">
+     <div class="col-sm-12 form-group">
+        <button type="button" id="btnFinishBuildPizza" class="btn btn-primary float-right" data-toggle="modal" data-target="#Confirmation_buildingPizza">
+            Finished Building Pizza
+        </button>
+     </div>    
+    </div>
+    </fieldset>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="Confirmation_buildingPizza" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle">Finished Building Pizza Confirmation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Did you finish build your pizza and ready to checkout?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" id="proceedToCheckout" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Billing Information -->
+    <form id="billingInfo">
+    <div class="row"> 
+
+    <label class="control-label" for="billingInfo"><h3>Billing Information</h3></label>
+    <div class="col-sm-12">
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input type="checkbox" id="sameAsDeli" value="sameAsDeli">&nbsp;Same as delivery information
+      </label>
+    </div>
+    </div>      
+    <div class="col-sm-6">           
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="bStAddress-addon">Street Address</span>
+        </div>
+        <input type="text"  id="bStAddress" name="Street Address" class="form-control" placeholder="Street Address" >
+        <div class=""> 
+        </div> 
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Suite Number</span>
+        </div>
+        <input type="text"  id="bSuiteNo" name="Suite Number" class="form-control" placeholder="optional apartment number, suite, or room number" >
+        <div class="">  
+        </div>              
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="bCity-addon">City</span>
+        </div>
+        <input type="text"  id="bCity" name="City" class="form-control" placeholder="City"  >
+        <div class=""> 
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="bState-addon">State</span>
+      </div>
+      <input type="text" id="bState" name="State" class="form-control" placeholder="State">
+      <div class=""> 
+      </div>     
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="bZipCode-addon">Zip Code</span>
+      </div>
+      <input type="text"  id="bZipCode" name="Zip Code" class="form-control" placeholder="Zip Code">
+      <div class="">
+      </div>
+    </div>
+    </div>
+    <div class="col-sm-6">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="cardHolderName-addon">Name on Card</span>
+        </div>
+        <input type="text"  id="cardHolderName" name="Card Holder's Full Name" class="form-control" placeholder="Card Holder's Name" aria-label="Card Holder's Name" aria-describedby="cardHolderName-addon">
+        <div class=""> 
+        </div>
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="cardNumber-addon">Card Number</span>
+        </div>
+        <input type="text" id="cardNumber" name="Credit Card Number" class="form-control" placeholder="Debit/Credit Card Number" aria-label="Debit/Credit Card Number" aria-describedby="cardNumber-addon">
+        <div class=""> 
+        </div>           
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="expirationDate-addon">Expiration Date</span>
+        </div>
+        <select class="form-control" name="Expiry Month" id="expiryMonth">
+            <option value="">Month</option>
+            <option value="1">01 - Jan</option>
+            <option value="2">02 - Feb</option>
+            <option value="3">03 - Mar</option>
+            <option value="4">04 - Apr</option>
+            <option value="5">05 - May</option>
+            <option value="6">06 - June</option>
+            <option value="7">07 - July</option>
+            <option value="8">08 - Aug</option>
+            <option value="9">09 - Sep</option>
+            <option value="10">10 - Oct</option>
+            <option value="11">11 - Nov</option>
+            <option value="12">12 - Dec</option>
+        </select>
+        <select class="form-control" name="Expiry Year" id="expiryYear">
+            <option value="">Year</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+        </select>
+        <div class="">
+        </div>      
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="cvv-addon">Card CVV</span>
+        </div>
+        <input type="text"  id="cvv" name="Card CVV Security Code" class="form-control" placeholder="Security Code" aria-label="Card CVV" aria-describedby="cvv-addon">
+        <div class="">  
+        </div>      
+    </div>
+        <div class="form-group">
+          <button type="button" id="btnPay" class="btn btn-success float-right"><strong>Pay Now</strong></button> 
+        </div>           
+    </div>   
+    </div>
+        </div>
+    </form>
+
+        
+</div>
+<!-- /Container -->
+
+<!--Footer-->
+<footer class="footer text-muted text-center text-small">
+    <div class="container">
+        <p class="mb-1 yellow"><br>&copy; 2019 Pizza Eats</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a class="yellow" href="#">Privacy</a></li>
+            <li class="list-inline-item"><a class="yellow" href="#">Terms</a></li>
+            <li class="list-inline-item"><a class="yellow" href="#">Support</a></li>
+        </ul>
+    </div>  
+</footer>
+<!-- /Footer -->
+
+<!-- Scripts -->
+<script src="/docs/4.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/script.js"></script>
+</body>
+</html>
